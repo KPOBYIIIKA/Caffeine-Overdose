@@ -1,0 +1,43 @@
+$primary-color: rgb(116, 178, 255);
+$secondary-color: rgb(255, 255, 255);
+
+* {
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    overflow-y: overlay;
+    background-color: rgb(200, 81, 81);
+}
+
+a {
+    color: black;
+}
+
+p, h1 {
+    font-weight: 200;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 5px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(116, 178, 255);
+}
