@@ -1,5 +1,9 @@
-$primary-color: rgb(116, 178, 255);
-$secondary-color: rgb(255, 255, 255);
+$primary-color: rgb(20, 20, 20);
+$secondary-color: rgb(255, 93, 43);
+
+$primary-text: white;
+
+
 
 * {
     border: none;
@@ -10,15 +14,16 @@ $secondary-color: rgb(255, 255, 255);
 
 body {
     overflow-y: overlay;
-    background-color: rgb(200, 81, 81);
+    background-color: $primary-color;
 }
 
 a {
-    color: black;
+    color: $secondary-color;
 }
 
 p, h1 {
-    font-weight: 200;
+    color: $secondary-color;
+    font-weight: bold;
 }
 
 /* width */
@@ -39,5 +44,5 @@ p, h1 {
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(116, 178, 255);
+    background: rgb(255, 255, 255);
 }
