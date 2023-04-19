@@ -1,0 +1,18 @@
+@use '../../_base';
+
+button {
+    padding: 0.8rem 4rem;
+    border-radius: 5px;
+    background-color: base.$secondary-color;
+    filter: drop-shadow(0 7px 0px rgb(157, 57, 26));
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.1s ease-out;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(210, 77, 36);
+    filter: drop-shadow(0 7px 0px rgb(157, 57, 26));
+}

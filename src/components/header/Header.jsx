@@ -1,5 +1,5 @@
-import classes from './Header.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classes from './Header.module.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Header() {
     return (
@@ -13,4 +13,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Header
