@@ -1,9 +1,9 @@
-import classes from './Timer.module.scss'
+import styles from './Timer.module.scss'
 
 function Timer(props) {
 
     return (
-        <span className={classes.timer}>{props.minutes.toString().padStart(2, '0')}:{props.seconds.toString().padStart(2, '0')}</span>
+        <span className={styles.timer}>{props.minutes.toString().padStart(2, '0')}:{props.seconds.toString().padStart(2, '0')}</span>
     )
 }
 

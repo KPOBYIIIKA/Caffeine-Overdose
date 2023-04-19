@@ -1,12 +1,12 @@
-import classes from "./App.module.scss";
+import styles from "./App.module.scss";
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 
 function App() {
   return (
-    <div className={classes}>
+    <div className={styles}>
       <Header />
-      <Main />
+      <Main time={25 * 60} />
     </div>
   );
 }

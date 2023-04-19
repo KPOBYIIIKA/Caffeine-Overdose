@@ -1,47 +1,47 @@
-import { useEffect, useState } from 'react';
-import classes from './Main.module.scss'
-import Button from '../button/Button'
-import Timer from '../timer/Timer'
+import { useEffect, useState } from "react";
+import styles from "./Main.module.scss";
+import Button from "../button/Button";
+import Timer from "../timer/Timer";
 
-function Main() {
-    const [isRunning, setIsRunning] = useState(false)
-    const [time, setTime] = useState(1500)
+function Main(props) {
+  const [isRunning, setIsRunning] = useState(false);
+  const [time, setTime] = useState(props.time);
 
-    useEffect(() => {
-        let interval = null;
+  useEffect(() => {
+    let interval = null;
 
-        if (isRunning) {
-            interval = setInterval(() => {
-                setTime((prevTime) => prevTime -1)
-            }, 1000)
-        } else {
-            clearInterval(interval);
-        }
-        
-        return () => clearInterval(interval)
-    }, [isRunning])
-
-    const startTimer = () => {
-        setIsRunning(true)
+    if (isRunning) {
+      interval = setInterval(() => {
+        setTime((prevTime) => (prevTime <= 0 ? 0 : prevTime - 1));
+      }, 1000);
+    } else {
+      clearInterval(interval);
     }
 
-    const stopTimer = () => {
-        setIsRunning(false)
-    }
+    return () => clearInterval(interval);
+  }, [isRunning]);
 
-    const minutes = Math.floor(time / 60)
-    const seconds = time % 60
+  const startTimer = () => {
+    setIsRunning(true);
+  };
 
-    return(
-        <section className={classes}>
-            <Timer minutes={minutes} seconds={seconds}/>
-            {isRunning ? (
-                <Button label="PAUSE" onClick={stopTimer} />
-            ) : (
-                <Button label="START" onClick={startTimer} />
-            )}
-        </section>
-    )
+  const stopTimer = () => {
+    setIsRunning(false);
+  };
+
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
+
+  return (
+    <section className={styles}>
+      <Timer minutes={minutes} seconds={seconds} />
+      <Button
+        label={isRunning ? "PAUSE" : "START"}
+        onClick={isRunning ? stopTimer : startTimer}
+        isRunning={isRunning}
+      />
+    </section>
+  );
 }
 
-export default Main
+export default Main;

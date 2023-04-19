@@ -1,10 +1,10 @@
-import classes from './Header.module.scss'
+import styles from './Header.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Header() {
     return (
-        <header className={classes}>
-            <FontAwesomeIcon icon='mug-hot' className={classes.fa}></FontAwesomeIcon>
+        <header className={styles}>
+            <FontAwesomeIcon icon='mug-hot' className={styles.fa}></FontAwesomeIcon>
             <h1>Caffeine Overdose</h1>
             <nav>
 

@@ -1,8 +1,8 @@
-import classes from './Button.module.scss'
+import styles from './Button.module.scss'
 
 function Button(props) {
     return (
-        <button className={classes} onClick={props.onClick}>{props.label}</button>
+        <button className={`${styles.button} ${props.isRunning ? styles.active : ''}`} onClick={props.onClick}>{props.label}</button>
     )
 }
 

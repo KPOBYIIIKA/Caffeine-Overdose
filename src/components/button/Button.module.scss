@@ -9,10 +9,14 @@ button {
     font-weight: bold;
     font-size: 1.5rem;
     transition: 0.1s ease-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(210, 77, 36);
+    }
 }
 
-button:hover {
-    cursor: pointer;
-    background-color: rgb(210, 77, 36);
-    filter: drop-shadow(0 7px 0px rgb(157, 57, 26));
+.active {
+    filter: drop-shadow(0 0px 0px rgb(157, 57, 26));
+    transform: translateY(7px);
 }
