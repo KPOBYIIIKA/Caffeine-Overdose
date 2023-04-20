@@ -4,9 +4,9 @@ import './index.scss';
 import App from './App';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMugHot } from '@fortawesome/free-solid-svg-icons';
+import { faMugHot, faGear, faUser } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faMugHot);
+library.add(faMugHot, faGear, faUser);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
