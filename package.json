@@ -62,6 +62,7 @@
     "@storybook/react-webpack5": "^7.0.6",
     "@storybook/testing-library": "^0.1.0",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "gh-pages": "^5.0.0",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.6",
     "webpack": "^5.79.0"
