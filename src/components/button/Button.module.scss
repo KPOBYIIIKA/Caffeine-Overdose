@@ -1,22 +1,22 @@
-@use '../../_base';
+@use "../../_base";
 
 button {
-    padding: 0.8rem 4rem;
-    border-radius: 5px;
-    background-color: base.$secondary-color;
-    filter: drop-shadow(0 7px 0px rgb(157, 57, 26));
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
-    transition: 0.1s ease-out;
+  padding: 0.8rem 4rem;
+  border-radius: 5px;
+  background-color: base.$secondary-color;
+  filter: drop-shadow(0 7px 0px rgb(157, 57, 26));
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: 0.1s ease-out;
 
-    &:hover {
-        cursor: pointer;
-        background-color: rgb(210, 77, 36);
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(210, 77, 36);
+  }
 }
 
 .active {
-    filter: drop-shadow(0 0px 0px rgb(157, 57, 26));
-    transform: translateY(7px);
+  filter: drop-shadow(0 0px 0px rgb(157, 57, 26));
+  transform: translateY(7px);
 }

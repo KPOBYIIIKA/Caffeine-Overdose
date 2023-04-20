@@ -11,7 +11,9 @@ function Main(props) {
   const animationFrameRef = useRef(null);
 
   useEffect(() => {
-    onProgressChange(((initialTime * 1000 - time) / (initialTime * 1000)) * 100);
+    onProgressChange(
+      ((initialTime * 1000 - time) / (initialTime * 1000)) * 100
+    );
   }, [time, onProgressChange, initialTime]);
 
   useEffect(() => {

@@ -1,64 +1,64 @@
-@use '../../_base';
+@use "../../_base";
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+  width: 40rem;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  .title {
+    cursor: pointer;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 1rem 0;
-    width: 40rem;
-    margin: 0 auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
 
-    .title {
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  h1 {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
 
-    h1 {
-        font-size: 1.5rem;
-        padding: 0 0.5rem;
+  .fa {
+    font-size: 1.2rem;
+    color: base.$primary-text;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  nav ul li {
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+    margin: 0 0 0 1rem;
+    border-radius: 5px;
+    background-color: rgba(255, 93, 43, 0.2);
+    color: rgb(225, 225, 225);
+    transition: ease-out 0.1s;
+
+    &:hover {
+      color: white;
     }
 
     .fa {
-        font-size: 1.2rem;
-        color: base.$primary-text;
+      margin: 0 0.5rem 0 0;
+      font-size: 0.9rem;
     }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
-
-    nav ul li {
-        cursor: pointer;
-        font-size: 0.9rem;
-        padding: 0.4rem 0.6rem;
-        margin: 0 0 0 1rem;
-        border-radius: 5px;
-        background-color: rgba(255, 93, 43, 0.2);
-        color: rgb(225, 225, 225);
-        transition: ease-out 0.1s;
-
-        &:hover {
-            color: white;
-        }
-
-        .fa {
-            margin: 0 0.5rem 0 0;
-            font-size: 0.9rem;
-        }
-    }
+  }
 }
 
 .progress {
-    padding: 2.06rem 0;
-    position: absolute;
-    width: 0rem;
-    border-bottom: 2px solid rgb(255, 93, 43);
-    transition: width 0.5 ease;
+  padding: 2.06rem 0;
+  position: absolute;
+  width: 0rem;
+  border-bottom: 2px solid rgb(255, 93, 43);
+  transition: width 0.5 ease;
 }

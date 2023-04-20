@@ -1,13 +1,13 @@
-@use '../../_base';
+@use "../../_base";
 
 section {
-    display: flex;
-    flex-direction: column;
-    width: 35rem;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem 0 3rem 0;
-    margin: 3rem auto;
-    border-radius: 5px;
-    background-color: rgba(255, 93, 43, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0 3rem 0;
+  margin: 3rem auto;
+  border-radius: 5px;
+  background-color: rgba(255, 93, 43, 0.2);
 }

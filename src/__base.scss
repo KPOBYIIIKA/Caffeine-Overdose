@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 $primary-color: rgb(20, 20, 20);
 $secondary-color: rgb(255, 93, 43);
@@ -6,47 +6,48 @@ $secondary-color: rgb(255, 93, 43);
 $primary-text: white;
 
 * {
-    border: none;
-    outline: none;
-    list-style: none;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
 
-    font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 body {
-    overflow-y: overlay;
-    background-color: rgb(20, 20, 20);
+  overflow-y: overlay;
+  background-color: rgb(20, 20, 20);
 }
 
 a {
-    color: $secondary-color;
+  color: $secondary-color;
 }
 
-p, h1 {
-    color: $secondary-color;
-    font-weight: bold;
+p,
+h1 {
+  color: $secondary-color;
+  font-weight: bold;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
-  
+
 /* Track */
 ::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
-  
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $primary-color;
-    border-radius: 5px;
+  background: $primary-color;
+  border-radius: 5px;
 }
-  
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
