@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/caffeine-overdose/static/css/main.e220f487.css",
+    "main.js": "/caffeine-overdose/static/js/main.d8384032.js",
+    "index.html": "/caffeine-overdose/index.html",
+    "main.e220f487.css.map": "/caffeine-overdose/static/css/main.e220f487.css.map",
+    "main.d8384032.js.map": "/caffeine-overdose/static/js/main.d8384032.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e220f487.css",
+    "static/js/main.d8384032.js"
+  ]
+}
