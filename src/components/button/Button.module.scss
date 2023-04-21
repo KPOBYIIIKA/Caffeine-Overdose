@@ -4,7 +4,7 @@ button {
   padding: 0.8rem 4rem;
   border-radius: 5px;
   background-color: base.$secondary-color;
-  filter: drop-shadow(0 7px 0px rgb(157, 57, 26));
+  box-shadow: 0 7px 0px rgb(157, 57, 26);
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
@@ -17,6 +17,6 @@ button {
 }
 
 .active {
-  filter: drop-shadow(0 0px 0px rgb(157, 57, 26));
+  box-shadow: 0 0px 0px rgb(157, 57, 26);
   transform: translateY(7px);
 }
