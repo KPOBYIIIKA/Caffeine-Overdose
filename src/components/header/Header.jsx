@@ -1,5 +1,6 @@
 import styles from "./Header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 function Header({ progress }) {
   const progressBarWidth = (progress / 100) * 40;
@@ -9,10 +10,12 @@ function Header({ progress }) {
         className={styles.progress}
         style={{ width: `${progressBarWidth}rem` }}
       ></div>
+      <Link to="/">
       <div className={styles.title}>
         <FontAwesomeIcon icon="mug-hot" className={styles.fa}></FontAwesomeIcon>
         <h1>Caffeine Overdose</h1>
       </div>
+      </Link>
       <nav>
         <ul>
           <li>
@@ -20,14 +23,15 @@ function Header({ progress }) {
               icon="gear"
               className={styles.fa}
             ></FontAwesomeIcon>
-            Settings
+            <span>Settings</span>
           </li>
           <li>
-            <FontAwesomeIcon
+          <Link to="/login">
+          <FontAwesomeIcon
               icon="user"
-              className={styles.fa}
-            ></FontAwesomeIcon>
-            Login
+              className={styles.fa}></FontAwesomeIcon>
+            <span>Login</span>
+          </Link>
           </li>
         </ul>
       </nav>
