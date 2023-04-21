@@ -2,16 +2,12 @@ import styles from './Login.module.scss'
 
 function Login() {
     return(
-        <div className={styles}>
+        <div className={styles.Login}>
             <form>
-                <div>
-                    <label>Email</label>
-                    <input/>
-                </div>
-                <div>
-                    <label>Password</label>
-                    <input/>
-                </div>
+                <label>Email</label>
+                <input type='email'/>
+                <label>Password</label>
+                <input type='password'/>
                 <button type='submit'>Log In</button>
             </form>
         </div>

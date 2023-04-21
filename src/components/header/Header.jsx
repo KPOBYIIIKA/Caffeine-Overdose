@@ -11,10 +11,13 @@ function Header({ progress }) {
         style={{ width: `${progressBarWidth}rem` }}
       ></div>
       <Link to="/">
-      <div className={styles.title}>
-        <FontAwesomeIcon icon="mug-hot" className={styles.fa}></FontAwesomeIcon>
-        <h1>Caffeine Overdose</h1>
-      </div>
+        <div className={styles.title}>
+          <FontAwesomeIcon
+            icon="mug-hot"
+            className={styles.fa}
+          ></FontAwesomeIcon>
+          <h1>Caffeine Overdose</h1>
+        </div>
       </Link>
       <nav>
         <ul>
@@ -26,12 +29,13 @@ function Header({ progress }) {
             <span>Settings</span>
             </li>*/}
           <li>
-          <Link to="/login">
-          <FontAwesomeIcon
-              icon="user"
-              className={styles.fa}></FontAwesomeIcon>
-            <span>Login</span>
-          </Link>
+            <Link to="/login">
+              <FontAwesomeIcon
+                icon="user"
+                className={styles.fa}
+              ></FontAwesomeIcon>
+              <span>Login</span>
+            </Link>
           </li>
         </ul>
       </nav>

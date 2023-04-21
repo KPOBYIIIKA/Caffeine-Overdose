@@ -62,9 +62,11 @@ header {
 }
 
 .progress {
-  padding: 2rem 0;
-  position: absolute;
   width: 0rem;
-  border-bottom: 2px solid rgb(255, 93, 43);
+  border-radius: 100px;
+  height: 3px;
+  background-color: rgb(255, 93, 43);;
+  position: absolute;
   transition: width 0.5 ease;
+  transform: translateY(33px);
 }
