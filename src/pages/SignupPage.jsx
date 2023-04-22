@@ -1,13 +1,13 @@
-import Login from "../components/login/Login";
-import styles from "./LoginPage.module.scss";
+import Signup from "../components/signup/Signup";
+import styles from "./SignupPage.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-function LoginPage() {
+function SignupPage() {
   return (
-    <div className={styles.LoginPage}>
+    <div className={styles.SignupPage}>
       <Link to="/">
-        <div className={styles.LoginPageTitle}>
+        <div className={styles.SignupPageTitle}>
           <FontAwesomeIcon
             icon="mug-hot"
             className={styles.fa}
@@ -15,16 +15,16 @@ function LoginPage() {
           <h1>Caffeine Overdose</h1>
         </div>
       </Link>
-      <h2>Log In</h2>
+      <h2>Sign Up</h2>
       <div className={styles.container}>
-        <Login />
+        <Signup />
       </div>
-      <span>Do not have an account?</span>
-      <Link to="/signup">
-        <span className={styles.Hyperlink}>Create Account</span>
+      <span>Already have an account?</span>
+      <Link to="/login">
+        <span className={styles.Hyperlink}>Log In</span>
       </Link>
     </div>
   );
 }
 
-export default LoginPage;
+export default SignupPage;

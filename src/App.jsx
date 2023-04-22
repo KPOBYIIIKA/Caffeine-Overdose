@@ -1,9 +1,10 @@
-import { useState } from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Main from "./components/main/Main";
 import LoginPage from "./pages/LoginPage";
-import Header from './components/header/Header'
+import SignupPage from "./pages/SignupPage";
+import Header from "./components/header/Header";
 
 function App() {
   const [progress, setProgress] = useState(0);
@@ -24,7 +25,8 @@ function App() {
             </>
           }
         />
-        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
       </Routes>
     </Router>
   );
