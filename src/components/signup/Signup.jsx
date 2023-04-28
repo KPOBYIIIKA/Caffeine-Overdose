@@ -1,6 +1,7 @@
 import styles from "./Signup.module.scss";
 
 function Signup() {
+
   return (
     <div className={styles.Signup}>
       <form>
