@@ -9,7 +9,6 @@ function Signup() {
   const [passwordRepeat, setPasswordRepeat] = useState("");
 
   const handleSubmit = async (e) => {
-    console.log("Submitted")
     e.preventDefault();
 
     if (password !== passwordRepeat) {

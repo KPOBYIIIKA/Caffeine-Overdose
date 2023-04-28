@@ -1,0 +1,25 @@
+.redirect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15rem 0;
+
+    .fa {
+        font-size: 7rem;
+        color: white;
+        transition: color ease-out 0.2s, transform ease-out 0.2s;
+        cursor: pointer;
+        text-align: center;
+
+        &:hover {
+            transform: scale(1.1);
+            color: rgb(255, 93, 43);
+        }
+    }
+
+    .label {
+        color: white;
+        margin: 3rem 0;
+    }
+}

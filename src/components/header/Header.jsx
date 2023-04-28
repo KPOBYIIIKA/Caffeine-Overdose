@@ -1,8 +1,11 @@
 import styles from "./Header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../AuthContext";
+
 
 function Header({ progress }) {
+  const { currentUser } = useAuth();
   const progressBarWidth = (progress / 100) * 40;
   return (
     <header className={styles}>
@@ -29,13 +32,17 @@ function Header({ progress }) {
             <span>Settings</span>
             </li>*/}
           <li>
-            <Link to="/login">
+            {currentUser ? (
+              <Link to="/profile">Profile</Link>
+            ) : (
+              <Link to="/login">
               <FontAwesomeIcon
                 icon="user"
                 className={styles.fa}
               ></FontAwesomeIcon>
               <span>Login</span>
             </Link>
+            )}
           </li>
         </ul>
       </nav>
