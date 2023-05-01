@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Redirect(props) {
     return(
-        <div className={styles.redirect}>
+        <div className={styles.Redirect}>
             <Link to="/"><FontAwesomeIcon
             icon="mug-hot"
             className={styles.fa}

@@ -14,7 +14,7 @@ function Button(props) {
 
   return (
     <button
-      className={`${styles.button} ${props.isRunning ? styles.active : ""}`}
+      className={`${styles.Button} ${props.isRunning ? styles.active : ""}`}
       onClick={handleClick}
     >
       {props.label}

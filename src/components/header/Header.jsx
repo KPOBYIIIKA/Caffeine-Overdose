@@ -2,13 +2,13 @@ import styles from "./Header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../AuthContext";
-
+import ProfileDropdown from "../ProfileDropdown/ProfileDropdown"
 
 function Header({ progress }) {
   const { currentUser } = useAuth();
   const progressBarWidth = (progress / 100) * 40;
   return (
-    <header className={styles}>
+    <header className={styles.Header}>
       <div
         className={styles.progress}
         style={{ width: `${progressBarWidth}rem` }}
@@ -33,15 +33,15 @@ function Header({ progress }) {
             </li>*/}
           <li>
             {currentUser ? (
-              <Link to="/profile">Profile</Link>
+              <ProfileDropdown />
             ) : (
               <Link to="/login">
-              <FontAwesomeIcon
-                icon="user"
-                className={styles.fa}
-              ></FontAwesomeIcon>
-              <span>Login</span>
-            </Link>
+                <FontAwesomeIcon
+                  icon="user"
+                  className={styles.fa}
+                ></FontAwesomeIcon>
+                <span>Login</span>
+              </Link>
             )}
           </li>
         </ul>

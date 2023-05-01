@@ -56,7 +56,7 @@ function Main(props) {
   const seconds = Math.floor((time % 60000) / 1000);
 
   return (
-    <section className={styles}>
+    <section className={styles.Main}>
       <Timer minutes={minutes} seconds={seconds} />
       <Button
         label={isRunning ? "PAUSE" : "START"}
