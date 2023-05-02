@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ProfileDropdown.module.scss";
 import Placeholder from "./../../assets/images/avatar.png";
-import { getAuth, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { getDoc } from "firebase/firestore";
+import { doc, getFirestore } from "firebase/firestore";
+import { auth } from "./../../firebase";
 
 function ProfileDropdown() {
+  const [user] = useAuthState(auth);
+  const [imageUrl, setImageUrl] = useState(localStorage.getItem("profileImage") || null);
   const [isOpen, setIsOpen] = useState(false);
-  const auth = getAuth();
   const navigate = useNavigate();
 
   const toggleDropdown = () => {
@@ -25,6 +31,26 @@ function ProfileDropdown() {
   };
 
   useEffect(() => {
+    const fetchProfileImage = async () => {
+      if (user) {
+        const db = getFirestore();
+        const userDocRef = doc(db, "users", user.uid);
+        const userDocSnapshot = await getDoc(userDocRef);
+
+        if (userDocSnapshot.exists()) {
+          const userData = userDocSnapshot.data();
+          if (userData.profileImage) {
+            setImageUrl(userData.profileImage);
+            localStorage.setItem("profileImage", userData.profileImage);
+          }
+        }
+      }
+    };
+
+    fetchProfileImage();
+  }, [user]);
+
+  useEffect(() => {
     const handleClickOutside = (event) => {
       if (!event.target.closest(`.${styles.ProfileDropdown}`)) {
         setIsOpen(false);
@@ -40,14 +66,16 @@ function ProfileDropdown() {
   return (
     <div className={styles.ProfileDropdown}>
       <img
-        src={Placeholder}
+        src={imageUrl || Placeholder}
         onClick={toggleDropdown}
         className={styles.DropdownButton}
         alt="Avatar"
       />
       {isOpen && (
         <ul className={styles.DropdownList}>
+          <Link to="/profile">
           <li className={styles.DropdownItem}>Profile</li>
+          </Link>
           <span></span>
           <li className={styles.DropdownItem} onClick={handleLogout}>
             Logout

@@ -1,0 +1,44 @@
+.Profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    img {
+        height: 15rem;
+        border-radius: 50%;
+        border: 1px
+    }
+
+    input {
+        padding: 0.75rem 0.5rem;
+        margin: 2rem 0;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: rgb(255, 93, 43);
+        color: white;
+        transition: background-color ease-out 0.2s, color ease-out 0.2s;
+        font-weight: 500;
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+
+    button {
+        padding: 0.75rem 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: rgb(255, 93, 43);
+        color: white;
+        transition: background-color ease-out 0.2s, color ease-out 0.2s;
+        font-weight: 500;
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}

@@ -12,6 +12,7 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import Header from "./components/header/Header";
 import Redirect from "./pages/Redirect";
+import Profile from "./pages/profile/Profile";
 
 function App() {
   const [progress, setProgress] = useState(0);
@@ -51,6 +52,7 @@ function AppRoutes({ progress, onProgressChange }) {
           <Redirect action={location.state ? location.state.action : ""} />
         }
       />
+      <Route path="/profile" element={<Profile />} />
     </Routes>
   );
 }
