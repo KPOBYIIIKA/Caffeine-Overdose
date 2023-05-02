@@ -24,14 +24,14 @@ function Header({ progress }) {
       </Link>
       <nav>
         <ul>
-          {/*<li>
+          <li>
             <FontAwesomeIcon
               icon="gear"
               className={styles.fa}
             ></FontAwesomeIcon>
             <span>Settings</span>
-            </li>*/}
-          <li>
+            </li>
+          <li className={currentUser ? styles.noBackground : ''}>
             {currentUser ? (
               <ProfileDropdown />
             ) : (

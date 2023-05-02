@@ -14,11 +14,11 @@ function Login() {
 
     try {
         await signInWithEmailAndPassword(auth, email, password);
-        navigate('/redirect');
+        navigate('/redirect', { state: { action: "Logged In" } });
 
       } catch (error) {
         console.error(error.message);
-        alert("Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihre Anmeldedaten.");
+        alert("Sign in failed. Please check your login credentials.");
       }
     };
 

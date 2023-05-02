@@ -44,6 +44,12 @@
     background-color: rgba(255, 93, 43, 0.2);
     z-index: 999;
 
+    &.noBackground {
+      background-color: transparent;
+      border-radius: 0;
+      padding: 0;
+    }
+
     span {
       font-size: 0.9rem;
       color: rgb(225, 225, 225);

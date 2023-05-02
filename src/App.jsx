@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { AuthProvider } from "./AuthContext";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
 import Main from "./components/main/Main";
 import LoginPage from "./pages/LoginPage";
@@ -18,22 +23,35 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Header progress={progress} />
-              <Main time={1 * 60} onProgressChange={handleProgressChange} />
-            </>
-          }
-        />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/redirect" element={<Redirect label="Logged In"/>} />
-      </Routes>
+        <AppRoutes progress={progress} onProgressChange={handleProgressChange} />
       </AuthProvider>
     </Router>
+  );
+}
+
+function AppRoutes({ progress, onProgressChange }) {
+  const location = useLocation();
+
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Header progress={progress} />
+            <Main time={1 * 60} onProgressChange={onProgressChange} />
+          </>
+        }
+      />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} />
+      <Route
+        path="/redirect"
+        element={
+          <Redirect action={location.state ? location.state.action : ""} />
+        }
+      />
+    </Routes>
   );
 }
 
