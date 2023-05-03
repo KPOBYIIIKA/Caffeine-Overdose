@@ -1,60 +1,60 @@
 .ProfileDropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .Img__container {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 5px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .DropdownList {
+    position: absolute;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 5px;
+    transform: translate(-80px, 70px);
+    cursor: default;
+  }
 
-    .Img__container {
-        height: 2rem;
-        width: 2rem;
-        border-radius: 5px;
+  .DropdownItem {
+    margin: 0.2rem 0;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    border-radius: 0;
+    background-color: transparent;
+    width: 12rem;
+    padding: 0.5rem 0rem 0.5rem 0.5rem;
+    white-space: nowrap;
+    font-weight: 500;
+    color: rgb(50, 50, 50);
+    transition: background-color ease-out 0.2s;
+
+    &:hover {
+      background-color: rgb(200, 200, 200);
     }
+  }
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
-    }
-
-    .DropdownList {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        padding: 0;
-        margin: 0;
-        background-color: white;
-        border-radius: 5px;
-        transform: translate(-80px, 70px);
-        cursor: default;
-    }
-
-    .DropdownItem {
-        margin: 0.2rem 0;
-        display: flex;
-        justify-content: left;
-        align-items: flex-start;
-        border-radius: 0;
-        background-color: transparent;
-        width: 12rem;
-        padding: 0.5rem 0rem 0.5rem 0.5rem;
-        white-space: nowrap;
-        font-weight: 500;
-        color: rgb(50, 50, 50);
-        transition: background-color ease-out 0.2s;
-
-        &:hover {
-            background-color: rgb(200, 200, 200);
-        }
-    }
-
-    span {
-        width: 11rem;
-        height: 1px;
-        padding: 0;
-        margin: 0;
-        background-color: rgb(225, 225, 225);
-    }
+  span {
+    width: 11rem;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(225, 225, 225);
+  }
 }

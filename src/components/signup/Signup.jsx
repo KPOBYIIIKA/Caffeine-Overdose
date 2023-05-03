@@ -27,17 +27,27 @@ function Signup() {
     <div className={styles.Signup}>
       <form onSubmit={handleSubmit}>
         <label>Email</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
         <label>Password</label>
-        <input type="password" value={password}
-          onChange={(e) => setPassword(e.target.value)}/>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
         <label>Repeat Password</label>
-        <input type="password" value={passwordRepeat}
-          onChange={(e) => setPasswordRepeat(e.target.value)}/>
+        <input
+          type="password"
+          value={passwordRepeat}
+          onChange={(e) => setPasswordRepeat(e.target.value)}
+        />
         <button type="submit">Sign Up</button>
       </form>
     </div>
   );
-};
+}
 
 export default Signup;

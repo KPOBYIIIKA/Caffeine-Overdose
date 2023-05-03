@@ -5,15 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 function Redirect(props) {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            navigate("/");
-        }, 3000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/");
+    }, 3000);
 
-        return () => clearTimeout(timer);
-    }, [navigate]);
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
   return (
     <div className={styles.Redirect}>

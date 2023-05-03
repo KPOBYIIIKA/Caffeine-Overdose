@@ -2,7 +2,7 @@ import styles from "./Header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../AuthContext";
-import ProfileDropdown from "../ProfileDropdown/ProfileDropdown"
+import ProfileDropdown from "../ProfileDropdown/ProfileDropdown";
 
 function Header({ progress }) {
   const { currentUser } = useAuth();
@@ -24,14 +24,14 @@ function Header({ progress }) {
       </Link>
       <nav>
         <ul>
-          <li>
+          {/*<li>
             <FontAwesomeIcon
               icon="gear"
               className={styles.fa}
             ></FontAwesomeIcon>
             <span>Settings</span>
-            </li>
-          <li className={currentUser ? styles.noBackground : ''}>
+  </li>*/}
+          <li className={currentUser ? styles.noBackground : ""}>
             {currentUser ? (
               <ProfileDropdown />
             ) : (
