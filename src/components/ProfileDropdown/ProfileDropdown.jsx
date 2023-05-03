@@ -11,7 +11,9 @@ import { auth } from "./../../firebase";
 
 function ProfileDropdown() {
   const [user] = useAuthState(auth);
-  const [imageUrl, setImageUrl] = useState(localStorage.getItem("profileImage") || null);
+  const [imageUrl, setImageUrl] = useState(
+    localStorage.getItem("profileImage") || null
+  );
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -22,7 +24,7 @@ function ProfileDropdown() {
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        navigate('/redirect', { state: { action: "Signed Out" } });
+        navigate("/redirect", { state: { action: "Signed Out" } });
       })
       .catch((error) => {
         console.error(error.message);
@@ -65,16 +67,18 @@ function ProfileDropdown() {
 
   return (
     <div className={styles.ProfileDropdown}>
-      <img
-        src={imageUrl || Placeholder}
-        onClick={toggleDropdown}
-        className={styles.DropdownButton}
-        alt="Avatar"
-      />
+      <div className={styles.Img__container}>
+        <img
+          src={imageUrl || Placeholder}
+          onClick={toggleDropdown}
+          className={styles.DropdownButton}
+          alt="Avatar"
+        />
+      </div>
       {isOpen && (
         <ul className={styles.DropdownList}>
           <Link to="/profile">
-          <li className={styles.DropdownItem}>Profile</li>
+            <li className={styles.DropdownItem}>Profile</li>
           </Link>
           <span></span>
           <li className={styles.DropdownItem} onClick={handleLogout}>
