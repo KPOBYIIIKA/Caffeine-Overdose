@@ -24,7 +24,10 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <AuthProvider>
-        <AppRoutes progress={progress} onProgressChange={handleProgressChange} />
+        <AppRoutes
+          progress={progress}
+          onProgressChange={handleProgressChange}
+        />
       </AuthProvider>
     </Router>
   );
