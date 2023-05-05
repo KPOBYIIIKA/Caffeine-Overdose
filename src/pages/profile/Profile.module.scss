@@ -8,8 +8,6 @@
   .Img__container {
     height: 15rem;
     width: 15rem;
-    border-radius: 20px;
-    border: 2px solid white;
     box-shadow: 0 7px 3px rgba(0, 0, 0, 0.5);
   }
 
@@ -17,6 +15,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: 2px solid white;
     border-radius: 20px;
   }
 
@@ -70,5 +69,12 @@
 
   .uploaded {
     background-color: rgb(73, 216, 75);
+  }
+
+  .User__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

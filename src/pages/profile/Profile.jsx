@@ -17,9 +17,10 @@ function Profile() {
     localStorage.getItem("profileImage") || null
   );
   const [isUploading, setIsUploading] = useState(false);
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
-    const fetchProfileImage = async () => {
+    const fetchProfileData = async () => {
       if (user) {
         const db = getFirestore();
         const userDocRef = doc(db, "users", user.uid);
@@ -31,11 +32,14 @@ function Profile() {
             setImageUrl(userData.profileImage);
             localStorage.setItem("profileImage", userData.profileImage);
           }
+          if (userData.username) {
+            setUsername(userData.username);
+          }
         }
       }
     };
 
-    fetchProfileImage();
+    fetchProfileData();
   }, [user]);
 
   const handleFileChange = (e) => {
@@ -85,6 +89,7 @@ function Profile() {
             {isUploading ? "Uploaded" : "Upload"}
           </button>
         </div>
+        <h1>{username}</h1>
       </div>
     </div>
   );

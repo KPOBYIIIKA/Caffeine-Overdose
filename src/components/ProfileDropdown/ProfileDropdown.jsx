@@ -24,11 +24,11 @@ function ProfileDropdown() {
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        navigate("/redirect", { state: { action: "Signed Out" } });
+        localStorage.removeItem("profileImage");
+        navigate("/redirect", { state: { action: "Logged Out" } });
       })
       .catch((error) => {
         console.error(error.message);
-        alert("Sign in failed. Please check your login credentials.");
       });
   };
 
