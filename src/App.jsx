@@ -55,7 +55,15 @@ function AppRoutes({ progress, onProgressChange }) {
           <Redirect action={location.state ? location.state.action : ""} />
         }
       />
-      <Route path="/profile" element={<Profile />} />
+      <Route
+        path="/profile"
+        element={
+          <>
+            <Header progress={progress} />
+            <Profile />
+          </>
+        }
+      />
     </Routes>
   );
 }

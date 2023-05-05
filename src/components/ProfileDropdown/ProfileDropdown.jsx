@@ -15,6 +15,7 @@ function ProfileDropdown() {
     localStorage.getItem("profileImage") || null
   );
   const [isOpen, setIsOpen] = useState(false);
+  const [username, setUsername] = useState("");
   const navigate = useNavigate();
 
   const toggleDropdown = () => {
@@ -33,7 +34,7 @@ function ProfileDropdown() {
   };
 
   useEffect(() => {
-    const fetchProfileImage = async () => {
+    const fetchProfileData = async () => {
       if (user) {
         const db = getFirestore();
         const userDocRef = doc(db, "users", user.uid);
@@ -45,11 +46,14 @@ function ProfileDropdown() {
             setImageUrl(userData.profileImage);
             localStorage.setItem("profileImage", userData.profileImage);
           }
+          if (userData.username) {
+            setUsername(userData.username);
+          }
         }
       }
     };
 
-    fetchProfileImage();
+    fetchProfileData();
   }, [user]);
 
   useEffect(() => {
@@ -77,7 +81,10 @@ function ProfileDropdown() {
       </div>
       {isOpen && (
         <ul className={styles.DropdownList}>
-          <Link to="/profile">
+          <li className={styles.DropdownItem}>
+            {username}
+          </li>
+          <Link to="/profile" onClick={toggleDropdown}>
             <li className={styles.DropdownItem}>Profile</li>
           </Link>
           <span></span>

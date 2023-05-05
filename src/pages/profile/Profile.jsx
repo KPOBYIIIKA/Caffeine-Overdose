@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { doc, setDoc, getFirestore } from "firebase/firestore";
 import styles from "./Profile.module.scss";
 import Placeholder from "./../../assets/images/avatar.png";
-import Header from "./../../components/header/Header";
 import { storage } from "./../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./../../firebase";
@@ -67,7 +66,6 @@ function Profile() {
 
   return (
     <div>
-      <Header />
       <div className={styles.Profile}>
         <div className={styles.Img__container}>
           <img src={imageUrl || Placeholder} alt="Avatar"></img>
