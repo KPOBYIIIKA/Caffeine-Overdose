@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Caffeine-Overdose/static/css/main.f1c89bf6.css",
-    "main.js": "/Caffeine-Overdose/static/js/main.17029726.js",
+    "main.css": "/Caffeine-Overdose/static/css/main.2078296a.css",
+    "main.js": "/Caffeine-Overdose/static/js/main.21e176bf.js",
     "static/media/click.wav": "/Caffeine-Overdose/static/media/click.d0672e5c86e5e11618db.wav",
     "index.html": "/Caffeine-Overdose/index.html",
-    "main.f1c89bf6.css.map": "/Caffeine-Overdose/static/css/main.f1c89bf6.css.map",
-    "main.17029726.js.map": "/Caffeine-Overdose/static/js/main.17029726.js.map"
+    "main.2078296a.css.map": "/Caffeine-Overdose/static/css/main.2078296a.css.map",
+    "main.21e176bf.js.map": "/Caffeine-Overdose/static/js/main.21e176bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1c89bf6.css",
-    "static/js/main.17029726.js"
+    "static/css/main.2078296a.css",
+    "static/js/main.21e176bf.js"
   ]
 }
